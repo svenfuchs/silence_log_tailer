@@ -1,0 +1,16 @@
+Silences Rails::Rack::LogTailer from tailing everything to the console.
+
+# Gemfile
+gem 'silence_log_tailer'
+
+Enable by setting anything to the SILENCE_LOG_TAILER environment variable:
+
+$ echo "export SILENCE_LOG_TAILER=stfu" >> ~/.zprofile
+$ source ~/.zprofile
+$ rails server
+
+or
+
+$ SILENCE_LOG_TAILER=foo rails server
+
+
